@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN"
+                  "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+</journal-title-group>
+<issn></issn>
+<publisher>
+<publisher-name></publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<title-group>
+<article-title>金融业与知识图谱</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<string-name>Xin Xiang</string-name>
+</contrib>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-04-27">
+<day>27</day>
+<month>4</month>
+<year>2024</year>
+</pub-date>
+<permissions>
+</permissions>
+<abstract>
+<p>得写个250-500字的abstract
+简单实现了，，，，，，能够对后续进行，，，有很好的价值。</p>
+</abstract>
+</article-meta>
+</front>
+<body>
+<sec id="introduction">
+  <title>Introduction</title>
+  <p>Explain your chosen topic and why it is important for your
+  field.</p>
+  <p>在这个项目里，我选择了图数据结构，并且阐述在传统金融行业面临的困境。</p>
+  <p>通过图结构在金融行业的垂直领域进行深耕，能够挖掘出很多我们无法在普通关系性数据库发现的细节。编织出一张知识图谱，辅助金融行业的高风险管理。</p>
+</sec>
+<sec id="literature-review">
+  <title>Literature Review</title>
+  <sec id="讨论知识图谱的进化发展历程简短">
+    <title>讨论知识图谱的进化发展历程（简短）</title>
+  </sec>
+  <sec id="讨论金融系统传统银行里进行数据分析的复杂性和重要性简短">
+    <title>讨论金融系统（传统银行）里进行数据分析的复杂性和重要性（简短）</title>
+  </sec>
+  <sec id="讨论知识图谱在金融行业的应用重点">
+    <title>讨论知识图谱在金融行业的应用（重点）</title>
+  </sec>
+</sec>
+<sec id="example-simple-shareholding-graph-system">
+  <title>Example : Simple Shareholding Graph System</title>
+  <sec id="description">
+    <title>Description</title>
+  </sec>
+  <sec id="data-source">
+    <title>Data source</title>
+    <p>person can hold a corp in {share} % person can be relative with
+    another person corp can hold another corp in {share} % corp can be a
+    branch of another corp person can be as a role of a corp</p>
+  </sec>
+  <sec id="code">
+    <title>Code</title>
+    <sec id="data-preparation">
+      <title>Data preparation</title>
+      <boxed-text>
+        <code language="python"># Python code to illustrate the example
+class Graph:
+    def __init__(self):
+        self.adjacency_list = {}  
+
+    def add_vertex(self, vertex):
+        if vertex not in self.adjacency_list:
+            self.adjacency_list[vertex] = []
+
+    def add_edge(self, from_vertex, to_vertex, weight=0):
+        if from_vertex in self.adjacency_list:
+            self.adjacency_list[from_vertex].append((to_vertex, weight))
+
+    def remove_edge(self, from_vertex, to_vertex):
+        if from_vertex in self.adjacency_list:
+            self.adjacency_list[from_vertex] = [t for t in self.adjacency_list[from_vertex] if t[0] != to_vertex]
+
+    def remove_vertex(self, vertex):
+        self.adjacency_list.pop(vertex, None)
+        for v in self.adjacency_list:
+            self.adjacency_list[v] = [t for t in self.adjacency_list[v] if t[0] != vertex]
+
+    def get_edges(self, vertex):
+        return self.adjacency_list.get(vertex, [])
+
+    def update_edge(self, from_vertex, to_vertex, new_weight):
+        if from_vertex in self.adjacency_list:
+            self.adjacency_list[from_vertex] = [(v, w if v != to_vertex else new_weight) for v, w in self.adjacency_list[from_vertex]]</code>
+      </boxed-text>
+    </sec>
+  </sec>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>这种图结构出来的知识图谱可以运用到金融行业里，比如说进行客户分群，精准提升金融行业</p>
+</sec>
+<sec id="references">
+  <title>References</title>
+</sec>
+</body>
+<back>
+<ref-list>
+</ref-list>
+</back>
+</article>

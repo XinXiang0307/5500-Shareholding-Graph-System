@@ -1,8 +1,5 @@
 project:
-  type: manuscript
-
-execute:
-  freeze: auto
+  type: website
 
 format:
   html:
@@ -11,7 +8,6 @@ format:
       hypothesis: true
   docx: default
   jats: default
-  agu-pdf: default
 
 
 
